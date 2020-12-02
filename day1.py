@@ -1,6 +1,6 @@
 # import time
 
-from util import get_input_list
+from util import get_input_lines
 import itertools
 
 # Not needed.
@@ -8,7 +8,7 @@ def filter_costs(cost_list: list) -> list:
     """
     Remove any costs greater than 2020.
     """
-    new_list = [x for x in cost_list if x <= 2020]
+    new_list = [int(x) for x in cost_list if int(x) <= 2020]
     return new_list
 
 # Easy but impractical.
@@ -62,9 +62,8 @@ def product_of_2020_x(cost_list: list, x: int) -> int:
 
 if __name__ == "__main__":
 
-    cost_list = get_input_list()
+    cost_list = get_input_lines()
     cost_list = filter_costs(cost_list)
-
 
     # start = time.time()
     # p2 = get_2020(cost_list)
